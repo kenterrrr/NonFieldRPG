@@ -7,6 +7,7 @@ public class QuestManager : MonoBehaviour
 {
     public StageUIManager stageUI;
     public GameObject enemyPrefab;
+    public BattleManager battleManager;
 
     int[] encountTable = { -1, -1, 0, -1, 0, -1 };
 
@@ -37,6 +38,8 @@ public class QuestManager : MonoBehaviour
     void EncountEnemy()
     {
         stageUI.DisplayButton(false);
-        Instantiate(enemyPrefab);
+        GameObject enemyObj = Instantiate(enemyPrefab);
+        EnemyManager enemy = enemyObj.GetComponent<EnemyManager>();
+        battleManager.Setup(enemy);
     }
 }
