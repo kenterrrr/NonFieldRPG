@@ -155,5 +155,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: "\u30C7\u30D3\u30EB"
-  hp: 100
+  hp: 50
   at: 10
